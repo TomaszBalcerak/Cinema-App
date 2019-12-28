@@ -1,0 +1,141 @@
+.App {
+  text-align: center;
+}
+body{
+  background-image: url('Images/dark-honeycomb/dark-honeycomb/dark-honeycomb.png');
+  box-sizing:border-box;
+}
+/*NAVIGATION*/
+.navbar{
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 1.5em;
+  height:10vh;
+  display:flex;
+}
+.navbar::before{
+  content:url('Images/icon2.png'); /*<div>Icons made by <a href="https://www.flaticon.com/authors/chanut" title="Chanut">Chanut</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>*/  
+  margin:15px;
+  margin-right:8px;
+}
+.navbar p{
+  margin:15px;
+  color:white;
+}
+/*MAIN CONTENT*/
+.main{
+  height:80vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: rgba(44, 45, 49, 0.38);
+  align-items: center;
+  justify-content: space-around;
+}
+.movieContainer{
+  overflow:hidden;
+  display:flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.1);
+  height:90%;
+  width:25%;
+  min-width:220px;
+  max-width:350px;
+  padding:10px;
+  margin:0 20px;
+  align-items: space-around;
+}
+.movieContainer img{
+  width:100%;
+  height:75%;
+}
+.MovieTitle{
+  height:15%;
+  text-align: center;
+  color:white;
+  margin:0;
+  margin-top:10px;
+  font-size: 18px;
+}
+.MovieButton{
+  background-color: rgba(0, 0, 0, 0.3);
+  width:50%;
+  margin-left:auto;
+  margin-right:auto;
+  cursor:pointer;
+  color:white;
+}
+.MovieButton:hover{
+  transform:scale(1.05);
+  background-color: #609c9e;
+}
+/*CINEMA SEATS*/
+.CinemaRoom{
+  height:80vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin:0 30%;
+  padding:0 10%;
+}
+.screen{
+  width:70%;
+  height:50px;
+  margin:10px 15%;
+  background-color: green;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.screen p{
+  font-size:25px;
+  margin:0;
+}
+.seats{
+  width:15%;
+  height:20px;
+  margin:1%;
+  background-color:white;
+  cursor:pointer;
+  text-align: center;
+}
+.seats:hover{
+  background-color: #609c9e;
+}
+/*FOOTER*/
+.footer{
+  background: rgba(255, 255, 255, 0.1);
+  height:10vh;
+  width:100%;
+  color:white;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+.footer p{
+margin:0;
+}
+@media (max-width:900px){
+  .main{
+  height:100%;
+  align-items: center;
+  justify-content: center;
+}
+  .movieContainer{
+  margin:20px;
+  height:70vh;
+  max-width:90vw;
+}
+.CinemaRoom{
+  margin:0 20%;
+}
+}
+@media (max-width:500px){
+  .movieContainer{
+    min-width:60vw;
+  }
+  .CinemaRoom{
+  margin:0 10%;
+}
+}
